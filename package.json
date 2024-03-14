@@ -1,0 +1,26 @@
+{
+  "name": "apiautomationsupertest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "posts": "npx jest posts.spec.ts",
+    "comments": "npx jest comments.spec.ts",
+    "albums": "npx jest albums.spec.ts",
+    "photos": "npx jest photos.spec.ts",
+    "todos": "npx jest todos.spec.ts",
+    "users": "npx jest users.spec.ts"
+  },
+  "author": "Svetlana Borisova",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "jest": "^29.7.0",
+    "prettier": "3.2.5",
+    "supertest": "^6.3.4",
+    "ts-jest": "^29.1.2"
+  },
+  "dependencies": {
+    "@types/supertest": "^6.0.2"
+  }
+}
