@@ -9,7 +9,8 @@
     "albums": "npx jest albums.spec.ts",
     "photos": "npx jest photos.spec.ts",
     "todos": "npx jest todos.spec.ts",
-    "users": "npx jest users.spec.ts"
+    "users": "npx jest users.spec.ts",
+    "tests": "npx jest spec"
   },
   "author": "Svetlana Borisova",
   "license": "ISC",
