@@ -22,4 +22,15 @@ describe("PHOTOS", () => {
     expect(res.statusCode).toEqual(201);
     expect(res.body.albumId).toEqual(1);
   });
+
+
+
+
+  
+  it("DELETE request", async () => {
+    const res = await request.delete("/photos/12");
+    console.log(res.body, "////////////////res.body///////////");
+    expect(res.statusCode).toEqual(200);
+    expect(res.body).toEqual({});
+  });
 });

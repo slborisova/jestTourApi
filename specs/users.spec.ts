@@ -32,4 +32,11 @@ describe("USERS", () => {
     expect(res.statusCode).toEqual(201);
     expect(res.body.address.zipcode).toBe("31428-2261");
   });
+
+  it("DELETE request", async () => {
+    const res = await request.delete("/users/24");
+    console.log(res.body, "--------------res.body-----------------");
+    expect(res.statusCode).toEqual(200);
+    expect(res.body).toEqual({});
+  });
 });

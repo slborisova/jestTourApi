@@ -21,4 +21,14 @@ describe("COMMENTS", () => {
     expect(res.statusCode).toEqual(201);
     expect(res.body.name).toEqual("id labore ex et quam laborum");
   });
+
+
+  
+
+  it("DELETE request", async () => {
+    const res = await request.delete("/comments/8");
+    console.log(res.body, "------------res.body---------------");
+    expect(res.statusCode).toEqual(200);
+    expect(res.body).toEqual({});
+  });
 });

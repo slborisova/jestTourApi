@@ -19,4 +19,15 @@ describe("ALBUMS", () => {
     expect(res.statusCode).toEqual(201);
     expect(res.body.title).toEqual("sunt qui excepturi placeat culpa");
   });
+
+
+
+  
+
+  it("DELETE request", async () => {
+    const res = await request.delete("/albums/9");
+    console.log(res.body, "=============res.body==============");
+    expect(res.statusCode).toEqual(200);
+    expect(res.body).toEqual({});
+  })
 });
