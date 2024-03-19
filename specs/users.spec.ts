@@ -33,6 +33,12 @@ describe("USERS", () => {
     expect(res.body.address.zipcode).toBe("31428-2261");
   });
 
+
+
+
+  
+
+
   it("DELETE request", async () => {
     const res = await request.delete("/users/24");
     console.log(res.body, "--------------res.body-----------------");

@@ -35,7 +35,7 @@ describe("POSTS", () => {
     expect(res.body.title).toBe(data.title);
     expect(res.body.title).not.toBe(beforeTitle);
   });
-  it.only("PATCH request with title version 2", async () => {
+  it("PATCH request with title version 2", async () => {
     const data = {
       title: "My first post request",
     };
@@ -47,14 +47,14 @@ describe("POSTS", () => {
       .patch("/posts/1")
       .send(data)
       .then((response) => {
-        console.log(response.body, "===============");
+        console.log(response.body, "===============response.body=========");
         expect(response.statusCode).toEqual(200);
         expect(response.body.title).toBe(data.title);
         expect(response.body.title).not.toBe(beforeTitle);
       });
   });
 
-  it.only("PATCH request with title version 3", (done) => {
+  it("PATCH request with title version 3", (done) => {
     const data = {
       title: "My first post request",
     };
@@ -63,7 +63,7 @@ describe("POSTS", () => {
     request.get("/posts/1").end((err, res) => {
       if (err) return done(err);
       beforeTitle = res.body.title;
-      console.log(beforeTitle, "beforeTitle==================");
+      console.log(beforeTitle, "++++++++++beforeTitle++++++++");
     });
     //updating the current data to new value
     request
@@ -72,7 +72,7 @@ describe("POSTS", () => {
       .expect(200)
       .end((err, res) => {
         if (err) return done(err);
-        console.log(res.body, "=====================");
+        console.log(res.body, "---------res.body---------");
         expect(res.body.title).toBe(data.title);
         expect(res.body.title).not.toBe(beforeTitle);
         done();
