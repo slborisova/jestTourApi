@@ -4,24 +4,28 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "login": "npx jest login.spec.ts",
     "posts": "npx jest posts.spec.ts",
+    "userSignUp": "npx jest userSignUp.spec.ts",
     "comments": "npx jest comments.spec.ts",
     "albums": "npx jest albums.spec.ts",
     "photos": "npx jest photos.spec.ts",
     "todos": "npx jest todos.spec.ts",
     "users": "npx jest users.spec.ts",
-    "tests": "npx jest spec"
+    "tests": "npx jest spec",
+    "createTour": "npx jest createTour.spec.ts"
   },
   "author": "Svetlana Borisova",
   "license": "ISC",
   "devDependencies": {
-    "@types/jest": "^29.5.12",
+    "@faker-js/faker": "^8.4.1",
     "jest": "^29.7.0",
     "prettier": "3.2.5",
     "supertest": "^6.3.4",
     "ts-jest": "^29.1.2"
   },
   "dependencies": {
+    "@types/jest": "^29.5.12",
     "@types/supertest": "^6.0.2"
   }
 }
