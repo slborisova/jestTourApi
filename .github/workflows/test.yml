@@ -3,7 +3,7 @@ name: Run Jest Tests
 on: push
     
 jobs:
-  jest-test:
+  jest-test-for-push:
     runs-on: ubuntu-latest
 
     steps:
