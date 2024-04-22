@@ -13,13 +13,13 @@ describe("UPLOAD", () => {
   });
 
   it("upload multiple documents", async () => {
-    const files: string[] = ["src/image/1.jpg", "src/image/2.PNG"];
+    const files: string[] = ["image/image.png", "image/QA Avatar (Picture).png"];
     const res = await upload(files);
     console.log(res.body);
     expect(res.status).toBe(200);
   });
   it("upload multiple documents", () => {
-    const files: string[] = ["src/image/1.jpg", "src/image/2.PNG"];
+    const files: string[] = ["image/image.png", "image/QA Avatar (Picture).png"];
     const req = request.post("/upload/multiple");
 
     for (const file of files) {
@@ -39,13 +39,13 @@ describe("UPLOAD", () => {
       });
     });
     it("upload multiple documents", async () => {
-      const files: string[] = ["src/image/1.jpg", "src/image/2.PNG"];
+      const files: string[] = ["image/image.png", "image/QA Avatar (Picture).png"];
       const res = await upload(files);
       console.log(res.body);
       expect(res.status).toBe(200);
     });
-    it.skip("upload multiple documents", () => {
-      const files: string[] = ["src/image/1.jpg", "src/image/2.PNG"];
+    it("upload multiple documents", () => {
+      const files: string[] = ["image/image.png", "image/QA Avatar (Picture).png"];
       const req = request.post("/upload/multiple");
 
       for (const file of files) {
