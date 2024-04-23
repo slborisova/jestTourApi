@@ -5,5 +5,10 @@ module.exports = {
   testEnvironmentOptions: {
     url: "localhost:8001/api/v1",
   },
-  reporters: ["default", "jest-junit"],
+  reporters: [
+    "default", ["jest-junit", {outputDirectory: "reports"}],
+    ['jest-html-reporters', {
+      publicPath: "reports",
+    }]
+  ],
 };
